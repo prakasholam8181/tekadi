@@ -26,30 +26,6 @@
 	        return $nestedRecords;
 	    }
 
-	   /* public static function nest($records, $recordPropId = 'id', $parentPropId = 'parent', $childWrapper = 'children', $parentId = null)
-	    {
-	        $nestedRecords = [];
-	        foreach ($records as $index => $children) {
-	            if (isset($children[$parentPropId]) && $children[$parentPropId] == $parentId) {
-	                $children[$childWrapper] = self::nest($records, $recordPropId, $parentPropId, $childWrapper, $children[$recordPropId]);
-	                $nestedRecords[] = $children;
-	            }
-	        }
-
-	        if (!$parentId) {
-	            $employeesIds = array_column($records, $recordPropId);
-	            $managers = array_column($records, $parentPropId);
-	            $missingManagerIds = array_filter(array_diff($managers, $employeesIds));
-	            foreach ($records as $record) {
-	                if (in_array($record[$parentPropId], $missingManagerIds)) {
-	                    $nestedRecords[] = $record;
-	                }
-	            }
-	        }
-
-	        return $nestedRecords;
-	    }*/
-
 	}
 
 	$employees = json_decode($data, true);
